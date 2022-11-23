@@ -1,0 +1,124 @@
+/* * 选择所有元素 */
+*{
+    margin:0;/*默认没有外边距*/
+    padding:0;/*默认没有内缩进*/
+    box-sizing: border-box;/*边框和内缩进是包括进width/height中
+    详细看https://www.runoob.com/cssref/css3-pr-box-sizing.html*/
+}
+/*html元素的整体文字大小
+px 像素
+vw 占窗口百分比
+rem 相对于当前元素文字大小的百分比*/
+html{
+    font-size: 10.5px;
+    height: 100%;
+}
+/* ::before 在……之前，用于放置在指定元素的上方 */
+html::before{
+    content: '';/*替换元素d*/
+    width: 100%;
+    height: 100%;
+    position: fixed;/*相对于屏幕的绝对位置*/
+    z-index: -1;/*显示优先级，越大显示在越上方 */
+    background: linear-gradient(120deg,#e0c3fc 0%,#8ec5fc 100%);/*渐变 */
+}
+/*选中或者高亮时文本属性*/
+::selection{
+    color: #fff;/*字体颜色*/
+    background-color: rgb(144,129,241);/*底色*/
+}
+.box{
+    display: flex;/*布局方式说明，默认从左向右*/
+    overflow: hidden;/*当元素溢出容器时，元素会被修剪，并且其余内容是不可见的
+    在这个例子中用于与下方border-radius配合去修剪圆角
+    scroll 同上，但是会显示滚动条以便查看其余的内容*/
+    width: 90rem;
+    height: 55rem;
+    background-color: rgba(255,255,255,60%);/*背景颜色*/
+    border-radius: 1.5rem;/*单个长度属性为圆角半径，使用两个长度属性时为椭圆长轴与短轴*/
+    margin: 10% auto;/*外边距*/
+    margin-top: 5.5%;/*上边距，并覆盖整体外边距的上边距属性*/
+    box-shadow:0 0 1rem 0.2rem rgb(0 0 0 / 10%);/*边框阴影*/
+}
+.box .left{
+    position: relative;/*position 元素偏移，relative 不影响其他元素的标签，但可能会扩大容器大小*/
+    width: 30%;/*容器占父元素的（box）大小*/
+    height: 100%;
+    background-color: skyblue;
+}
+.box .left::before{
+    content: '';
+    position: absolute;/*在absolute下元素在没有定义宽度的情况下，*/
+    width: 100%;/*宽度由元素里面的内容决定*/
+    height: 100%;
+    background-image: url(t1.png);/*背景图片*/
+    background-size: cover;/*保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小*/
+    opacity: 80%;/*透明度*/
+}
+.box .right{
+    display: flex;/*布局方式说明，默认从左向右*/
+    width: 70%;
+    flex-direction: column;/*更改布局方式为从上到下*/
+    align-items: center;/*增加布局模式为当前方向居中*/
+}
+.box .right h4{/*更改容器中h4元素的属性*/
+    color: rgb(144,129,241);
+    font-size: 3rem;
+    margin-top: 5rem;/*外边距 -top为指定上边距*/
+}
+.box .right form{/*form输入框容器*/
+    display: flex;
+    flex-wrap: wrap;/*元素排列时自动换行*/
+    justify-content: center;/*增加布局模式为当前垂直方向居中*/
+}
+.box .right form .acc{
+    outline: none;
+    width: 80%;
+    height: 5rem;
+    font-size: 1.6rem;
+    margin-top: 5rem;
+    padding: 1rem 0 0 1.6rem;/*设置文字(p)元素的四个内边距，分别是 上 右 下 左*/
+    border: none;/*输入框边框，none为无边框*/
+    border-bottom: 1px solid rgb(144,129,241);/*输入框边框，-bottom为下边框
+    边框粗细 solid 边框颜色*/
+    color: rgb(144,129,241);
+    background-color: rgba(0,0,0,0);/*输入框内的背景颜色，默认为白色*/
+}
+.right form .acc:focus{/*:focus 输入框内输入的文字元素*/
+    outline: none; /*元素边框外的元素轮廓*/
+    color: rgb(144,129,241);/*文字颜色*/
+    padding: 1rem 0 0 1.6rem;/*设置元素的四个内边距，分别是 上 右 下 左*/
+}
+.right .submit{
+    width: 70%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg,#e0c3fc 0%,#8ec5fc 100%);
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 6rem 0 0 30%;
+    transform: translateX(-20%);/*transform 对元素的位置旋转缩放倾斜进行改变
+    translateX(x)对x轴的位置进行改变*/
+}
+.right .submit:hover{/*:hover 当鼠标移到元素上时的执行的效果/动画*/
+    box-shadow: 0 0 2rem -0.5rem rgba(0,0,0,0.25);/*显示阴影*/
+}
+.right .fn{
+    display: flex;
+    justify-content: space-evenly;/*元素居中并聚合，space-between为发散*/
+    margin-left: 0.94rem;
+    margin-top: 1.5rem;
+    width: 59.5%;
+}
+.right .fn a{/*a 超链接标记*/
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    text-decoration:none;/*去除超链接的下划线*/
+    background-image: linear-gradient(120deg,#9ed0f0 0%,#48cbef 100%);
+}
+.right .fn a:hover{
+    box-shadow: 0 0 2rem -0.5rem rgba(0,0,0,0.25);
+}

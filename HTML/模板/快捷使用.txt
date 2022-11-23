@@ -1,0 +1,1 @@
+<div οnclick="location.href='http://www.dz37w.com';">，使整个div变成超链接。

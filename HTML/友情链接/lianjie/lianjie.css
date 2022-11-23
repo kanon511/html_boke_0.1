@@ -1,0 +1,47 @@
+.zheng{
+    margin:10rem 2rem 0rem 2rem;
+    padding:2rem;
+    background: rgba(255,255,255,60%);
+    border-radius: 1rem;
+    box-shadow:0 0 1rem 0.2rem rgb(0 0 0 / 10%);
+}
+.zheng .web0{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: #eeeeee;
+    border-radius: 1rem;
+    box-shadow:0 0 1rem 0.2rem rgb(0 0 0 / 10%)
+}
+.zheng .web0 .box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 10rem;
+    height: 14rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+.zheng .web0 .box .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 1.6rem;
+    box-shadow: 1.5rem 1.5rem 2.6rem rgba(0,0,0,0.2),-1.5rem -1.5rem 2.6rem rgb(255,255,255);
+    transition: all 0.2s ease-out;
+}
+.zheng .web0 .box .img img{
+    width: 6rem;
+    transition: all 0.2s ease-out;
+}
+.zheng .web0 .box p{
+    color: rgb(144,129,241);
+}
+.zheng .web0 .box .img:hover{
+    box-shadow: 0 0 0 rgba(0,0,0,0.2),0 0 0 rgba(255,255,255,0.8),inset 1.5rem 1.5rem 2.6rem rgba(0,0,0,0.2),inset -1.5rem -1.5rem 2.6rem rgb(255,255,255);
+}

@@ -1,0 +1,44 @@
+.name{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top:40rem;
+    height: 17rem;
+    padding-bottom:2rem;
+    font-size: 5.2rem;
+    align-items: flex-end;
+}
+.name h2{
+    color: rgb(102, 85, 200);
+}
+.name .t{
+    width: 15rem;
+    height: 15rem;
+    margin-right: 8%;
+    background-image: url(../../主页/zhuye/tp1.jpg);
+    background-size: cover;
+}
+.xhx{
+    margin:-6rem 2rem 0rem 2rem;
+    height: 5rem;
+    z-index: -1;
+    overflow: hidden;
+    background: rgba(255,255,255,60%);
+    border-radius: 1rem;
+    box-shadow:0 0 1rem 0.2rem rgb(0 0 0 / 10%);
+}
+.zheng{
+    margin:3rem 2rem 0rem 2rem;
+    padding:2rem;
+    height: 200.5rem;
+    background: rgba(255,255,255,60%);
+    border-radius: 1rem;
+    box-shadow:0 0 1rem 0.2rem rgb(0 0 0 / 10%);
+}
+.zheng p{
+    font-size: 3.5rem;
+    color: rgb(102, 85, 200);
+}
+.zheng h1{
+    font-size: 4rem;
+    color: rgb(102, 85, 200);
+}
